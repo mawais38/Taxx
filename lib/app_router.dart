@@ -11,7 +11,7 @@ class AppRouter {
   static String home = 'home';
 
   // Handler
-  static final Handler _homeScreenHandler = Handler(handlerFunc: (context, params) => HomeScreen());
+  static final Handler _homeScreenHandler = Handler(handlerFunc: (context, params) => const HomeScreen());
 
 
   static void setupRoutes() {

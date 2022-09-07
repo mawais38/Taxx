@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,7 +14,6 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State<LoginForm> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  bool _showPassword = false;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +44,7 @@ class _LoginFormState extends State<LoginForm> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const SizedBox(height:30),
+                  const SizedBox(height: 30),
                   const Text(
                     "LOGIN",
                     textScaleFactor: 2.0,
@@ -72,47 +70,47 @@ class _LoginFormState extends State<LoginForm> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
-                    height: 55,
-                    width: 320,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
                     child: TextFormField(
-                      decoration: const InputDecoration(
-                        filled: true,
-                        fillColor: Color(0xfff0e6ff),
-                        prefixIcon: Icon(
+                      decoration: InputDecoration(
+                        prefixIcon:const Icon(
                           Icons.person,
                           color: Color(0xff325aa3),
                         ),
-                        hintText: 'Your Email',
+                        filled: true,
+                        fillColor:const Color(0xfff0e6ff),
+                        hintText: 'Password',
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(27)),
-                          borderSide:  BorderSide(color: Colors.white, width: 0.0),
-                        ),
+                            borderSide: const BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.circular(30)),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.circular(30)),
                       ),
-                      controller: _emailController,
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    height: 55,
-                    width: 320,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
                     child: TextFormField(
-                      decoration: const InputDecoration(
-                          filled: true,
-                          fillColor: Color(0xfff0e6ff),
-                          prefixIcon: Icon(
-                            Icons.lock,
-                            color: Color(0xff325aa3),
-                          ),
-                          hintText: 'Password',
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(27)),
-                            borderSide:  BorderSide(color: Colors.white, width: 0.0),
-                          ),
-                          suffixIcon: Icon(Icons.remove_red_eye)),
-                      controller: _passwordController,
+                      decoration: InputDecoration(
+                        suffixIcon: const Icon(Icons.remove_red_eye),
+                        prefixIcon: const Icon(
+                          Icons.lock,
+                          color: Color(0xff325aa3),
+                        ),
+                        filled: true,
+                        fillColor: const Color(0xfff0e6ff),
+                        hintText: 'Password',
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.circular(30)),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.white),
+                            borderRadius: BorderRadius.circular(30)),
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -121,9 +119,9 @@ class _LoginFormState extends State<LoginForm> {
                   Container(
                     height: 50,
                     width: 320,
-                    decoration:  BoxDecoration(
-                        color: Color(0xff0e47a1),
-                        borderRadius: BorderRadius.circular(35),
+                    decoration: BoxDecoration(
+                      color: const Color(0xff0e47a1),
+                      borderRadius: BorderRadius.circular(35),
                     ),
                     child: const FloatingActionButton.extended(
                         backgroundColor: Color(0xff0e47a1),
@@ -145,7 +143,9 @@ class _LoginFormState extends State<LoginForm> {
                         style: TextButton.styleFrom(
                           primary: const Color(0xff0e47a1),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          _onLoginButtonPressed();
+                        },
                         child: const Text(
                           'Sign Up',
                           style: TextStyle(
@@ -167,7 +167,7 @@ class _LoginFormState extends State<LoginForm> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             border:
-                                Border.all(color: Color(0xffF8F2FE), width: 1)),
+                                Border.all(color:const Color(0xffF8F2FE), width: 1)),
                         child: const Icon(
                           Icons.facebook,
                           size: 25,
@@ -183,7 +183,7 @@ class _LoginFormState extends State<LoginForm> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             border:
-                                Border.all(color: Color(0xffF8F2FE), width: 1)),
+                                Border.all(color: const Color(0xffF8F2FE), width: 1)),
                         child: const Icon(
                           FontAwesomeIcons.twitter,
                           size: 25,
@@ -199,7 +199,7 @@ class _LoginFormState extends State<LoginForm> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             border:
-                                Border.all(color: Color(0xffF8F2FE), width: 1)),
+                                Border.all(color: const Color(0xffF8F2FE), width: 1)),
                         child: const Icon(
                           FontAwesomeIcons.googlePlus,
                           size: 25,

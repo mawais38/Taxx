@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class TokenProvider {
-  final FlutterSecureStorage _storage = FlutterSecureStorage();
+  final FlutterSecureStorage _storage = const FlutterSecureStorage();
   final String _tokenKey = 'loudrToken';
 
   String? _token;
