@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
               authenticationRepository: authenticationRepository,
             );
           },
-          child: LoginForm(),
+          child: const LoginForm(),
         ),
       ),
     );

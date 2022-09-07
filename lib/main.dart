@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-
 import 'app_router.dart';
 import 'blocs/authentication/authentication_bloc.dart';
 import 'blocs/simple_bloc_observer.dart';
@@ -27,7 +25,8 @@ void main() {
       runApp(
         MultiBlocProvider(
           providers: [
-            BlocProvider<AuthenticationBloc>(create: (context) => authenticationBloc),
+            BlocProvider<AuthenticationBloc>(
+                create: (context) => authenticationBloc),
           ],
           child: const TaxxApp(),
         ),
@@ -45,9 +44,10 @@ class TaxxApp extends StatelessWidget {
     return MaterialApp(
       title: 'TaxxApp',
       theme: defaultTheme,
-      home: BlocBuilder<AuthenticationBloc, AuthenticationState>(builder: (context, state) {
+      home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
+          builder: (context, state) {
         if (state is AuthenticationSuccess) {
-          return HomeScreen();
+          return const HomeScreen();
         }
         if (state is AuthenticationFailure) {
           return LoginScreen();
@@ -55,7 +55,7 @@ class TaxxApp extends StatelessWidget {
         if (state is AuthenticationInProgress) {
           return const LoadingIndicator();
         }
-        return SplashScreen();
+        return const SplashScreen();
       }),
     );
   }

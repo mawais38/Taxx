@@ -1,4 +1,4 @@
-name: Taxx
+name: taxx
 description: A flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -40,5 +40,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-#  assets:
-#    - assets/
+  assets:
+    - assets/

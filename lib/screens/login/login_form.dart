@@ -1,11 +1,11 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/login_bloc.dart';
 
 class LoginForm extends StatefulWidget {
+  const LoginForm({Key? key}) : super(key: key);
+
   @override
   State<LoginForm> createState() => _LoginFormState();
 }
@@ -30,7 +30,7 @@ class _LoginFormState extends State<LoginForm> {
       listener: (context, state) {
         if (state is LoginFailure) {
           Scaffold.of(context).showSnackBar(
-            SnackBar(
+            const SnackBar(
               content: Text('Wrong username or password. Please try again.'),
               backgroundColor: Colors.red,
             ),
@@ -67,7 +67,7 @@ class _LoginFormState extends State<LoginForm> {
                             decoration: InputDecoration(
                               labelText: 'password',
                               suffixIcon: IconButton(
-                                icon: Icon(Icons.visibility_off),
+                                icon: const Icon(Icons.visibility_off),
                                 onPressed: () {
                                   setState(
                                       () => _showPassword = !_showPassword);
@@ -84,7 +84,7 @@ class _LoginFormState extends State<LoginForm> {
                             decoration: InputDecoration(
                               labelText: 'password',
                               suffixIcon: IconButton(
-                                icon: Icon(Icons.visibility),
+                                icon: const Icon(Icons.visibility),
                                 onPressed: () {
                                   setState(
                                       () => _showPassword = !_showPassword);
@@ -100,12 +100,12 @@ class _LoginFormState extends State<LoginForm> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.all(15),
+                padding:const  EdgeInsets.all(15),
                 child: RaisedButton(
-                  key: Key('loginButton'),
+                  key: const Key('loginButton'),
                   onPressed:
                       state is! LoginInProgress ? _onLoginButtonPressed : null,
-                  child: Text(
+                  child:const  Text(
                     'LOGIN',
                     style: TextStyle(
                       fontSize: 16,

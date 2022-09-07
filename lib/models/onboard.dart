@@ -1,0 +1,1 @@
+enum Onboard{login,signup}
