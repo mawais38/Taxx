@@ -46,10 +46,12 @@ class _LoginFormState extends State<LoginForm> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  const SizedBox(height:30),
                   const Text(
-                    "SIGNUP",
+                    "LOGIN",
+                    textScaleFactor: 2.0,
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         fontWeight: FontWeight.w600,
                         color: Color(0xff174896)),
                   ),
@@ -70,7 +72,7 @@ class _LoginFormState extends State<LoginForm> {
                   const SizedBox(
                     height: 10,
                   ),
-                  SizedBox(
+                  Container(
                     height: 55,
                     width: 320,
                     child: TextFormField(
@@ -82,8 +84,9 @@ class _LoginFormState extends State<LoginForm> {
                           color: Color(0xff325aa3),
                         ),
                         hintText: 'Your Email',
-                        border: OutlineInputBorder(
+                        enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(27)),
+                          borderSide:  BorderSide(color: Colors.white, width: 0.0),
                         ),
                       ),
                       controller: _emailController,
@@ -92,7 +95,7 @@ class _LoginFormState extends State<LoginForm> {
                   const SizedBox(
                     height: 20,
                   ),
-                  SizedBox(
+                  Container(
                     height: 55,
                     width: 320,
                     child: TextFormField(
@@ -104,8 +107,9 @@ class _LoginFormState extends State<LoginForm> {
                             color: Color(0xff325aa3),
                           ),
                           hintText: 'Password',
-                          border: OutlineInputBorder(
+                          enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(27)),
+                            borderSide:  BorderSide(color: Colors.white, width: 0.0),
                           ),
                           suffixIcon: Icon(Icons.remove_red_eye)),
                       controller: _passwordController,
@@ -117,13 +121,14 @@ class _LoginFormState extends State<LoginForm> {
                   Container(
                     height: 50,
                     width: 320,
-                    decoration: const BoxDecoration(
+                    decoration:  BoxDecoration(
                         color: Color(0xff0e47a1),
-                        borderRadius: BorderRadius.all(Radius.circular(32))),
+                        borderRadius: BorderRadius.circular(35),
+                    ),
                     child: const FloatingActionButton.extended(
                         backgroundColor: Color(0xff0e47a1),
                         onPressed: null,
-                        label: Text("SIGNUP")),
+                        label: Text("LOGIN")),
                   ),
                   const SizedBox(
                     height: 10,
@@ -131,15 +136,21 @@ class _LoginFormState extends State<LoginForm> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Already have an Account?",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w400),),
+                      const Text(
+                        "Don't have an Account?",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w400),
+                      ),
                       TextButton(
                         style: TextButton.styleFrom(
                           primary: const Color(0xff0e47a1),
-
-
                         ),
                         onPressed: () {},
-                        child: const Text('Sign In',style:TextStyle(fontSize: 14,fontWeight: FontWeight.w600),),
+                        child: const Text(
+                          'Sign Up',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w600),
+                        ),
                       )
                     ],
                   ),
@@ -155,7 +166,8 @@ class _LoginFormState extends State<LoginForm> {
                         width: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            border: Border.all(color: Color(0xffF8F2FE), width: 1)),
+                            border:
+                                Border.all(color: Color(0xffF8F2FE), width: 1)),
                         child: const Icon(
                           Icons.facebook,
                           size: 25,
@@ -170,7 +182,8 @@ class _LoginFormState extends State<LoginForm> {
                         width: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            border: Border.all(color: Color(0xffF8F2FE), width: 1)),
+                            border:
+                                Border.all(color: Color(0xffF8F2FE), width: 1)),
                         child: const Icon(
                           FontAwesomeIcons.twitter,
                           size: 25,
@@ -185,8 +198,9 @@ class _LoginFormState extends State<LoginForm> {
                         width: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            border: Border.all(color: Color(0xffF8F2FE), width: 1)),
-                        child:const Icon(
+                            border:
+                                Border.all(color: Color(0xffF8F2FE), width: 1)),
+                        child: const Icon(
                           FontAwesomeIcons.googlePlus,
                           size: 25,
                           color: Colors.red,
