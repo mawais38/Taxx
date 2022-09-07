@@ -16,18 +16,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: const Center(
-            child: Text(
-              'SIGNUP',
-              style: TextStyle(
-                fontSize: 26,
-                color: Colors.blue,
-              ),
-            ),
-          )),
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: BlocProvider<LoginBloc>(
