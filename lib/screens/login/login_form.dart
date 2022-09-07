@@ -72,8 +72,9 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
+                        horizontal: 10, vertical: 10),
                     child: TextFormField(
+                      obscureText: true,
                       decoration: InputDecoration(
                         prefixIcon:const Icon(
                           Icons.person,
@@ -93,7 +94,7 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
+                        horizontal: 10, vertical: 10),
                     child: TextFormField(
                       decoration: InputDecoration(
                         suffixIcon: const Icon(Icons.remove_red_eye),
@@ -111,6 +112,7 @@ class _LoginFormState extends State<LoginForm> {
                             borderSide: const BorderSide(color: Colors.white),
                             borderRadius: BorderRadius.circular(30)),
                       ),
+                      controller: _passwordController,
                     ),
                   ),
                   const SizedBox(
@@ -154,7 +156,15 @@ class _LoginFormState extends State<LoginForm> {
                       )
                     ],
                   ),
-                  const Text("OR"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Divider(
+                        thickness: 3,
+                      ),
+                      const Text("OR"),
+                    ],
+                  ),
                   const SizedBox(
                     height: 30,
                   ),
