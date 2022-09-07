@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../widgets/custom_paint.dart';
-import '../../widgets/custom_paint2.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -31,10 +30,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: Text(
                     "WELCOME TO TAXX",
                     textAlign: TextAlign.center,
-                    textScaleFactor: 2.0,
                     style: TextStyle(
                         color: Color(0xff0F398B),
-                        fontSize: 14,
+                        fontSize: 20,
                         fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -90,17 +88,17 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           Positioned(
-            bottom: 810,
-            right: 600,
+            bottom:710,
+            right: 450,
             child: CustomPaint(
-              painter: DrawCircles(),
+              painter:  DrawCircle(color: Color(0XFFF7E3FE),value1: 20,value2: 8,value3: 140),
             ),
           ),
           Positioned(
             top: 650,
-            right: 430,
+            right: 415,
             child: CustomPaint(
-              painter: DrawCircle(),
+              painter: DrawCircle(color: Color(0xfff7e3fe),value1: 20,value2: 8,value3: 80),
             ),
           ),
         ],
