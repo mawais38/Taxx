@@ -3,8 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:getwidget/components/button/gf_button.dart';
-import 'package:getwidget/types/gf_button_type.dart';
 
 import 'bloc/login_bloc.dart';
 
@@ -70,13 +68,15 @@ class _LoginFormState extends State<LoginForm> {
                   width: 320,
                   child: TextFormField(
                     decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xfff0e6ff),
                       prefixIcon: Icon(
                         Icons.person,
-                        color: Colors.blue,
+                        color: Color(0xff325aa3),
                       ),
                       hintText: 'Your Email',
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderRadius: BorderRadius.all(Radius.circular(27)),
                       ),
                     ),
                     controller: _emailController,
@@ -90,13 +90,15 @@ class _LoginFormState extends State<LoginForm> {
                   width: 320,
                   child: TextFormField(
                     decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xfff0e6ff),
                         prefixIcon: Icon(
                           Icons.lock,
-                          color: Colors.blue,
+                          color: Color(0xff325aa3),
                         ),
                         hintText: 'Password',
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          borderRadius: BorderRadius.all(Radius.circular(27)),
                         ),
                         suffixIcon: Icon(Icons.remove_red_eye)),
                     controller: _passwordController,
@@ -105,10 +107,15 @@ class _LoginFormState extends State<LoginForm> {
                 const SizedBox(
                   height: 10,
                 ),
-                const SizedBox(
+                 Container(
                   height: 65,
                   width: 320,
-                  child: FloatingActionButton.extended(
+                  decoration: const BoxDecoration(
+                    color: Color(0xff0e47a1),
+                    borderRadius: BorderRadius.all(Radius.circular(32))
+                  ),
+                  child: const FloatingActionButton.extended(
+                    backgroundColor: Color(0xff0e47a1),
                       onPressed: null, label: Text("SIGNUP")),
                 ),
                 const SizedBox(
@@ -117,10 +124,10 @@ class _LoginFormState extends State<LoginForm> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("ALready have an Account?"),
+                    const Text("Already have an Account?"),
                     TextButton(
                       style: TextButton.styleFrom(
-                        primary: Colors.blue,
+                        primary: const Color(0xff6981a7),
                       ),
                       onPressed: () {},
                       child: const Text('Sign In'),
