@@ -43,128 +43,134 @@ class _LoginFormState extends State<LoginForm> {
         builder: (context, state) {
           return Padding(
             padding: const EdgeInsets.only(left: 12),
-            child: Column(
-              children: [
-                // Text("sdfdsf", style: TextStyle(fontSize: 30),),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 150,
-                    width: 350,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/carservice.gif"),
-                        fit: BoxFit.cover,
-                        // colorFilter: ColorFilter.mode(Colors.black45, BlendMode.darken)
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  // Text("sdfdsf", style: TextStyle(fontSize: 30),),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 150,
+                      width: 350,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/carservice.gif"),
+                          fit: BoxFit.cover,
+                          // colorFilter: ColorFilter.mode(Colors.black45, BlendMode.darken)
+                        ),
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: 70,
-                  width: 320,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      filled: true,
-                      fillColor: Color(0xfff0e6ff),
-                      prefixIcon: Icon(
-                        Icons.person,
-                        color: Color(0xff325aa3),
-                      ),
-                      hintText: 'Your Email',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(27)),
-                      ),
-                    ),
-                    controller: _emailController,
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: 70,
-                  width: 320,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      filled: true,
-                      fillColor: Color(0xfff0e6ff),
+                  SizedBox(
+                    height: 70,
+                    width: 320,
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xfff0e6ff),
                         prefixIcon: Icon(
-                          Icons.lock,
+                          Icons.person,
                           color: Color(0xff325aa3),
                         ),
-                        hintText: 'Password',
+                        hintText: 'Your Email',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(27)),
                         ),
-                        suffixIcon: Icon(Icons.remove_red_eye)),
-                    controller: _passwordController,
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                 Container(
-                  height: 65,
-                  width: 320,
-                  decoration: const BoxDecoration(
-                    color: Color(0xff0e47a1),
-                    borderRadius: BorderRadius.all(Radius.circular(32))
-                  ),
-                  child: const FloatingActionButton.extended(
-                    backgroundColor: Color(0xff0e47a1),
-                      onPressed: null, label: Text("SIGNUP")),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text("Already have an Account?"),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        primary: const Color(0xff6981a7),
                       ),
-                      onPressed: () {},
-                      child: const Text('Sign In'),
-                    )
-                  ],
-                ),
-                const Text("OR"),
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.facebook_rounded,
-                      size: 50,
+                      controller: _emailController,
                     ),
-                    SizedBox(
-                      width: 10,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 70,
+                    width: 320,
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xfff0e6ff),
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            color: Color(0xff325aa3),
+                          ),
+                          hintText: 'Password',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(27)),
+                          ),
+                          suffixIcon: Icon(Icons.remove_red_eye)),
+                      controller: _passwordController,
                     ),
-                    Icon(
-                      FontAwesomeIcons.twitter,
-                      size: 50,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                   Container(
+                    height: 65,
+                    width: 320,
+                    decoration: const BoxDecoration(
+                      color: Color(0xff0e47a1),
+                      borderRadius: BorderRadius.all(Radius.circular(32))
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Icon(
-                      FontAwesomeIcons.googlePlus,
-                      size: 50,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                  ],
-                )
-              ],
+                    child: const FloatingActionButton.extended(
+                      backgroundColor: Color(0xff0e47a1),
+                        onPressed: null, label: Text("SIGNUP")),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Already have an Account?", style: TextStyle(color: Color(0xff2E5493)),),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          primary: const Color(0xff6981a7),
+                        ),
+                        onPressed: () {},
+                        child: const Text('Sign In', style: TextStyle(color: Color(0xff46608E)),),
+                      )
+                    ],
+                  ),
+                  const Text('OR', style: TextStyle(color: Color(0xff46608E)),),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Icon(
+                        Icons.facebook_rounded,
+                        size: 50,
+                        color: Colors.blue,
+
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        FontAwesomeIcons.twitter,
+                        size: 50,
+                        color: Colors.blue,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        FontAwesomeIcons.googlePlus,
+                        size: 50,
+                        color: Colors.blue,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           );
         },
