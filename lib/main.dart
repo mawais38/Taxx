@@ -1,3 +1,4 @@
+import 'package:Taxx/screens/signup/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'app_router.dart';
@@ -44,15 +45,15 @@ class TaxxApp extends StatelessWidget {
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
           builder: (context, state) {
         if (state is AuthenticationSuccess) {
-          return LoginScreen();
+          return SignupForm();
         }
         if (state is AuthenticationFailure) {
-          return LoginScreen();
+          return SignupForm();
         }
         if (state is AuthenticationInProgress) {
-          return LoginScreen();
+          return SignupForm();
         }
-        return LoginScreen();
+        return SignupForm();
       }),
     );
   }

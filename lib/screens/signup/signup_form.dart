@@ -1,47 +1,25 @@
-import 'package:Taxx/screens/signup/signup_form.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../widgets/custom_paint.dart';
-import 'bloc/login_bloc.dart';
+import '../login/login_screen.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({Key? key}) : super(key: key);
+class SignupForm extends StatefulWidget {
+  const SignupForm({Key? key}) : super(key: key);
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignupForm> createState() => _LoginFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _LoginFormState extends State<SignupForm> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    _onLoginButtonPressed() {
-      BlocProvider.of<LoginBloc>(context).add(
-        LoginButtonPressed(
-          username: _emailController.text,
-          password: _passwordController.text,
-        ),
-      );
-    }
 
-    return BlocListener<LoginBloc, LoginState>(
-      listener: (context, state) {
-        if (state is LoginFailure) {
-          Scaffold.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Wrong username or password. Please try again.'),
-              backgroundColor: Colors.red,
-            ),
-          );
-        }
-      },
-      child: BlocBuilder<LoginBloc, LoginState>(
-        builder: (context, state) {
-          return Stack(
+    return Material(
+      child: Stack(
             children: [
               Positioned(
                 child: Padding(
@@ -51,7 +29,7 @@ class _LoginFormState extends State<LoginForm> {
                       children: [
                         const SizedBox(height: 30),
                         const Text(
-                          "LOGIN",
+                          "SIGNUP",
                           textScaleFactor: 2.0,
                           style: TextStyle(
                               fontSize: 14,
@@ -89,11 +67,11 @@ class _LoginFormState extends State<LoginForm> {
                               hintText: 'Email',
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
                           ),
@@ -114,14 +92,37 @@ class _LoginFormState extends State<LoginForm> {
                               hintText: 'Password',
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
                             controller: _passwordController,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 10),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              prefixIcon: const Icon(
+                                Icons.phone_android,
+                                color: Color(0xff325aa3),
+                              ),
+                              filled: true,
+                              fillColor: const Color(0xfff0e6ff),
+                              hintText: 'Phone',
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide:
+                                  const BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(30)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                  const BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(30)),
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -137,7 +138,7 @@ class _LoginFormState extends State<LoginForm> {
                           child: const FloatingActionButton.extended(
                               backgroundColor: Color(0xff0e47a1),
                               onPressed: null,
-                              label: Text("LOGIN")),
+                              label: Text("SIGNUP")),
                         ),
                         const SizedBox(
                           height: 10,
@@ -146,7 +147,7 @@ class _LoginFormState extends State<LoginForm> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Text(
-                              "Don't have an Account?",
+                              "Already have an Account?",
                               style: TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.w400),
                             ),
@@ -157,11 +158,11 @@ class _LoginFormState extends State<LoginForm> {
                               onPressed: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => const SignupForm()),
+                                  MaterialPageRoute(builder: (context) => LoginScreen()),
                                 );
                               },
                               child: const Text(
-                                'Sign Up',
+                                'Sign In',
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.w600),
                               ),
@@ -250,9 +251,7 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
             ],
-          );
-        },
-      ),
+          ),
     );
   }
 }
