@@ -16,17 +16,14 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(12),
-        child: BlocProvider<LoginBloc>(
-          create: (context) {
-            return LoginBloc(
-              authenticationBloc: BlocProvider.of<AuthenticationBloc>(context),
-              authenticationRepository: authenticationRepository,
-            );
-          },
-          child: const LoginForm(),
-        ),
+      body: BlocProvider<LoginBloc>(
+        create: (context) {
+          return LoginBloc(
+            authenticationBloc: BlocProvider.of<AuthenticationBloc>(context),
+            authenticationRepository: authenticationRepository,
+          );
+        },
+        child: const LoginForm(),
       ),
     );
   }

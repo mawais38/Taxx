@@ -9,12 +9,9 @@ const SignUpScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return const Material(
       child:  Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(12),
-          child: SignupForm(),
-        ),
+        body: SignupForm(),
       ),
     );
   }
