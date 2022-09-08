@@ -14,6 +14,7 @@ class SignupForm extends StatefulWidget {
 class _LoginFormState extends State<SignupForm> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +75,7 @@ class _LoginFormState extends State<SignupForm> {
                                   const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
+                            controller: _emailController,
                           ),
                         ),
                         Padding(
@@ -123,6 +125,7 @@ class _LoginFormState extends State<SignupForm> {
                                   const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
+                            controller: _phoneController,
                           ),
                         ),
                         const SizedBox(

@@ -12,7 +12,7 @@ import 'themes/default_theme.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      options: FirebaseOptions(
+      options: const FirebaseOptions(
           apiKey: "AIzaSyA8sLZ2MwyAEk4lyNkjLAsyR-AMuopbcVE",
           appId: "1:58567138263:android:a28cf2fa07ff578ea60992",
           messagingSenderId: "58567138263",
