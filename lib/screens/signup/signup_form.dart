@@ -235,8 +235,8 @@ class _LoginFormState extends State<SignupForm> {
                 ),
               ),
               Positioned(
-                bottom: 730,
-                right: 370,
+                bottom: 750,
+                right: 410,
                 // bottom: 800,
                 // right: 570,
                 child: CustomPaint(
@@ -244,8 +244,8 @@ class _LoginFormState extends State<SignupForm> {
                 ),
               ),
               Positioned(
-                top: 530,
-                right: 390,
+                top: 570,
+                right: 420,
                 child: CustomPaint(
                   painter: DrawCircle(color: const Color(0XFFF8F2FE),value1: 20,value2: 80,value3: 80),
                 ),
