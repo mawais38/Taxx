@@ -234,12 +234,12 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
               Positioned(
-                bottom: 730,
-                right: 370,
+                bottom: 692,
+                right: 390,
                 // bottom: 800,
                 // right: 570,
                 child: CustomPaint(
-                  painter: DrawCircle(color: const Color(0xffF4C0CC), value1: 20,value2: 80,value3: 100),
+                  painter: DrawCircle(color: const Color(0xffF4C0CC), value1: 20,value2: 50,value3: 100),
                 ),
               ),
               Positioned(
