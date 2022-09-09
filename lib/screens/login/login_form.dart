@@ -1,4 +1,5 @@
 import 'package:Taxx/screens/signup/signup_form.dart';
+import 'package:Taxx/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -89,13 +90,14 @@ class _LoginFormState extends State<LoginForm> {
                               hintText: 'Email',
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
+                            controller: _emailController,
                           ),
                         ),
                         Padding(
@@ -114,11 +116,11 @@ class _LoginFormState extends State<LoginForm> {
                               hintText: 'Password',
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide:
-                                      const BorderSide(color: Colors.white),
+                                  const BorderSide(color: Colors.white),
                                   borderRadius: BorderRadius.circular(30)),
                             ),
                             controller: _passwordController,
@@ -157,7 +159,7 @@ class _LoginFormState extends State<LoginForm> {
                               onPressed: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => const SignupForm()),
+                                  MaterialPageRoute(builder: (context) => const SignUpScreen()),
                                 );
                               },
                               child: const Text(
@@ -168,86 +170,85 @@ class _LoginFormState extends State<LoginForm> {
                             )
                           ],
                         ),
-                        const Text("OR"),
-                        const SizedBox(
-                          height: 30,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border: Border.all(
-                                      color: const Color(0xffF8F2FE),
-                                      width: 1)),
-                              child: const Icon(
-                                Icons.facebook,
-                                size: 25,
-                                color: Colors.blueAccent,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border: Border.all(
-                                      color: const Color(0xffF8F2FE),
-                                      width: 1)),
-                              child: const Icon(
-                                FontAwesomeIcons.twitter,
-                                size: 25,
-                                color: Colors.blue,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(25),
-                                  border: Border.all(
-                                      color: const Color(0XFFF8F2FE),
-                                      width: 1)),
-                              child: const Icon(
-                                FontAwesomeIcons.googlePlus,
-                                size: 25,
-                                color: Colors.red,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                          ],
-                        )
+                        // const Text("OR"),
+                        // const SizedBox(
+                        //   height: 30,
+                        // ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [
+                        //     Container(
+                        //       height: 50,
+                        //       width: 50,
+                        //       decoration: BoxDecoration(
+                        //           borderRadius: BorderRadius.circular(25),
+                        //           border: Border.all(
+                        //               color: const Color(0xffF8F2FE),
+                        //               width: 1)),
+                        //       child: const Icon(
+                        //         Icons.facebook,
+                        //         size: 25,
+                        //         color: Colors.blueAccent,
+                        //       ),
+                        //     ),
+                        //     const SizedBox(
+                        //       width: 10,
+                        //     ),
+                        //     Container(
+                        //       height: 50,
+                        //       width: 50,
+                        //       decoration: BoxDecoration(
+                        //           borderRadius: BorderRadius.circular(25),
+                        //           border: Border.all(
+                        //               color: const Color(0xffF8F2FE),
+                        //               width: 1)),
+                        //       child: const Icon(
+                        //         FontAwesomeIcons.twitter,
+                        //         size: 25,
+                        //         color: Colors.blue,
+                        //       ),
+                        //     ),
+                        //     const SizedBox(
+                        //       width: 10,
+                        //     ),
+                        //     Container(
+                        //       height: 50,
+                        //       width: 50,
+                        //       decoration: BoxDecoration(
+                        //           borderRadius: BorderRadius.circular(25),
+                        //           border: Border.all(
+                        //               color: const Color(0XFFF8F2FE),
+                        //               width: 1)),
+                        //       child: const Icon(
+                        //         FontAwesomeIcons.googlePlus,
+                        //         size: 25,
+                        //         color: Colors.red,
+                        //       ),
+                        //     ),
+                        //     const SizedBox(
+                        //       width: 10,
+                        //     ),
+                        //   ],
+                        // )
                       ],
                     ),
                   ),
                 ),
               ),
               Positioned(
-                bottom: 750,
-                right: 410,
+                bottom: 630,
+                right: 400,
                 child: CustomPaint(
                   painter: DrawCircle(color: const Color(0xffF4C0CC), value1: 25,value2: 80,value3: 100),
                 ),
               ),
               Positioned(
-                top: 540,
-                right: 430,
+                top: 490,
+                right: 420,
                 child: CustomPaint(
                   painter: DrawCircle(color: const Color(0XFFF8F2FE),value1: 20,value2: 80,value3: 80),
                 ),
               ),
-              Container(),
             ],
           );
         },
