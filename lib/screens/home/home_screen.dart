@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,10 +17,13 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top:50),
+                  padding: const EdgeInsets.only(top: 50),
                   child: Row(
                     children: [
-                      Icon(Icons.ac_unit_outlined, size: 80,),
+                      Icon(
+                        Icons.ac_unit_outlined,
+                        size: 80,
+                      ),
                       Text(
                         "K29 Solutions",
                         style: TextStyle(
@@ -33,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right:210, top: 30),
+                  padding: const EdgeInsets.only(right: 210, top: 30),
                   child: Text(
                     "Welcome to",
                     style: TextStyle(
@@ -43,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right:150),
+                  padding: const EdgeInsets.only(right: 150),
                   child: Text(
                     "Wash my car",
                     style: TextStyle(
@@ -59,8 +61,14 @@ class HomeScreen extends StatelessWidget {
             height: 15,
           ),
           const Padding(
-            padding: EdgeInsets.only(left:15),
-            child: Text("Service", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w900, fontSize: 28),),
+            padding: EdgeInsets.only(left: 15),
+            child: Text(
+              "Service",
+              style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 28),
+            ),
           ),
           const SizedBox(height: 10),
           Padding(
@@ -73,8 +81,17 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -82,8 +99,17 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -91,8 +117,17 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -100,15 +135,24 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 60),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Row(
@@ -119,8 +163,17 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -128,8 +181,17 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -137,8 +199,17 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -146,8 +217,17 @@ class HomeScreen extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage("https://media.istockphoto.com/vectors/car-wash-line-icon-thin-line-for-web-and-mobile-modern-minimalistic-vector-id1184395340?k=20&m=1184395340&s=612x612&w=0&h=XMW0pguoMNjIyBmCheaNzFxllDacZvFV_6C1j-JjFa8="), fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(55),
-                    color: Colors.red,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 3,
+                        blurRadius: 2,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -159,12 +239,23 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text("Specialist",style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600, fontSize: 20), ),
-                Text("View all", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600, fontSize: 20),),
+                Text(
+                  "Specialist",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20),
+                ),
+                Text(
+                  "View all",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20),
+                ),
               ],
             ),
           )
-
         ],
       ),
     );
