@@ -50,12 +50,12 @@ class TaxxApp extends StatelessWidget {
               return const HomeScreen();
             }
             if (state is AuthenticationFailure) {
-              return LoginScreen();
+              return HomeScreen();
             }
             if (state is AuthenticationInProgress) {
-              return const LoadingIndicator();
+              return const HomeScreen();
             }
-            return const SplashScreen();
+            return const HomeScreen();
           }),
     );
   }
