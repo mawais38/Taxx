@@ -459,7 +459,10 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const Specialist(),
+            Padding(
+              padding: const EdgeInsets.only(top:15),
+              child: const Specialist(),
+            ),
           ],
         ),
       ),
@@ -472,32 +475,67 @@ class Specialist extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 200,
       width: double.infinity,
       child: ListView(
         // This next line does the trick.
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          Container(
-            width: 160.0,
-            color: Colors.red,
+          SizedBox(
+            width: 150,
+            height: 150,
+            child: Column(
+              children: [
+                Image.asset("assets/engine-block.jpg"),
+                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
           ),
-          Container(
-            width: 160.0,
-            color: Colors.blue,
+          SizedBox(
+            width: 150,
+            height: 150,
+            child: Column(
+              children: [
+                Image.asset("assets/engine-block.jpg"),
+                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
           ),
-          Container(
-            width: 160.0,
-            color: Colors.green,
+          SizedBox(
+            width: 150,
+            height: 150,
+            child: Column(
+              children: [
+                Image.asset("assets/engine-block.jpg"),
+                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
           ),
-          Container(
-            width: 160.0,
-            color: Colors.yellow,
+          SizedBox(
+            width: 150,
+            height: 150,
+            child: Column(
+              children: [
+                Image.asset("assets/engine-block.jpg"),
+                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
           ),
-          Container(
-            width: 160.0,
-            color: Colors.orange,
+          SizedBox(
+            width: 150,
+            height: 150,
+            child: Column(
+              children: [
+                Image.asset("assets/engine-block.jpg"),
+                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
           ),
         ],
       ),
