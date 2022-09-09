@@ -170,83 +170,69 @@ class _LoginFormState extends State<LoginForm> {
                             )
                           ],
                         ),
-                        // const Text("OR"),
-                        // const SizedBox(
-                        //   height: 30,
-                        // ),
-                        // Row(
-                        //   mainAxisAlignment: MainAxisAlignment.center,
-                        //   children: [
-                        //     Container(
-                        //       height: 50,
-                        //       width: 50,
-                        //       decoration: BoxDecoration(
-                        //           borderRadius: BorderRadius.circular(25),
-                        //           border: Border.all(
-                        //               color: const Color(0xffF8F2FE),
-                        //               width: 1)),
-                        //       child: const Icon(
-                        //         Icons.facebook,
-                        //         size: 25,
-                        //         color: Colors.blueAccent,
-                        //       ),
-                        //     ),
-                        //     const SizedBox(
-                        //       width: 10,
-                        //     ),
-                        //     Container(
-                        //       height: 50,
-                        //       width: 50,
-                        //       decoration: BoxDecoration(
-                        //           borderRadius: BorderRadius.circular(25),
-                        //           border: Border.all(
-                        //               color: const Color(0xffF8F2FE),
-                        //               width: 1)),
-                        //       child: const Icon(
-                        //         FontAwesomeIcons.twitter,
-                        //         size: 25,
-                        //         color: Colors.blue,
-                        //       ),
-                        //     ),
-                        //     const SizedBox(
-                        //       width: 10,
-                        //     ),
-                        //     Container(
-                        //       height: 50,
-                        //       width: 50,
-                        //       decoration: BoxDecoration(
-                        //           borderRadius: BorderRadius.circular(25),
-                        //           border: Border.all(
-                        //               color: const Color(0XFFF8F2FE),
-                        //               width: 1)),
-                        //       child: const Icon(
-                        //         FontAwesomeIcons.googlePlus,
-                        //         size: 25,
-                        //         color: Colors.red,
-                        //       ),
-                        //     ),
-                        //     const SizedBox(
-                        //       width: 10,
-                        //     ),
-                        //   ],
-                        // )
+                        const Text("OR"),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  border: Border.all(
+                                      color: const Color(0xffF8F2FE),
+                                      width: 1)),
+                              child: const Icon(
+                                Icons.facebook,
+                                size: 25,
+                                color: Colors.blueAccent,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  border: Border.all(
+                                      color: const Color(0xffF8F2FE),
+                                      width: 1)),
+                              child: const Icon(
+                                FontAwesomeIcons.twitter,
+                                size: 25,
+                                color: Colors.blue,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  border: Border.all(
+                                      color: const Color(0XFFF8F2FE),
+                                      width: 1)),
+                              child: const Icon(
+                                FontAwesomeIcons.googlePlus,
+                                size: 25,
+                                color: Colors.red,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                          ],
+                        )
                       ],
                     ),
                   ),
-                ),
-              ),
-              Positioned(
-                bottom: 630,
-                right: 400,
-                child: CustomPaint(
-                  painter: DrawCircle(color: const Color(0xffF4C0CC), value1: 25,value2: 80,value3: 100),
-                ),
-              ),
-              Positioned(
-                top: 490,
-                right: 420,
-                child: CustomPaint(
-                  painter: DrawCircle(color: const Color(0XFFF8F2FE),value1: 20,value2: 80,value3: 80),
                 ),
               ),
             ],
