@@ -485,92 +485,92 @@ class Specialist extends StatelessWidget {
           Container(
             width: 150,
             decoration: BoxDecoration(
-                color: Color(0xfff0e6ff).withOpacity(0.5),
+                color: const Color(0xfff0e6ff).withOpacity(0.5),
                 borderRadius: BorderRadius.circular(10),
-                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
+                border:Border.all(width: 1,color: const Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
                 ),
                 const Text("Rs 12800", style:  TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),
           ),
-          SizedBox(width: 7,),
+          const SizedBox(width: 7,),
           Container(
             width: 150,
             decoration: BoxDecoration(
-                color: Color(0xfff0e6ff).withOpacity(0.5),
+                color: const Color(0xfff0e6ff).withOpacity(0.5),
                 borderRadius: BorderRadius.circular(10),
-                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
+                border:Border.all(width: 1,color: const Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
 
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
                 ),
                 const Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),
           ),
-          SizedBox(width: 7,),
+          const SizedBox(width: 7,),
           Container(
             width: 150,
             decoration: BoxDecoration(
-                color: Color(0xfff0e6ff).withOpacity(0.5),
+                color: const Color(0xfff0e6ff).withOpacity(0.5),
                 borderRadius: BorderRadius.circular(10),
-                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
+                border:Border.all(width: 1,color: const Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
                 ),
                 const Text("Rs 12800", style:  TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),
           ),
-          SizedBox(width: 7,),
+          const SizedBox(width: 7,),
           Container(
             width: 150,
             decoration: BoxDecoration(
-              color: Color(0xfff0e6ff).withOpacity(0.5),
+              color: const Color(0xfff0e6ff).withOpacity(0.5),
               borderRadius: BorderRadius.circular(10),
-              border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
+              border:Border.all(width: 1,color: const Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
                 ),                const Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),
           ),
-          SizedBox(width: 7,),
+          const SizedBox(width: 7,),
           Container(
             width: 150,
             decoration: BoxDecoration(
-                color: Color(0xfff0e6ff).withOpacity(0.5),
+                color: const Color(0xfff0e6ff).withOpacity(0.5),
                 borderRadius: BorderRadius.circular(10),
-                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
+                border:Border.all(width: 1,color: const Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
                 ),                const Text("Rs 12800", style:  TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),

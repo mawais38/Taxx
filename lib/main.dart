@@ -47,15 +47,15 @@ class TaxxApp extends StatelessWidget {
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
           builder: (context, state) {
             if (state is AuthenticationSuccess) {
-              return const HomeScreen();
+              return const SplashScreen();
             }
             if (state is AuthenticationFailure) {
-              return HomeScreen();
+              return SplashScreen();
             }
             if (state is AuthenticationInProgress) {
-              return const HomeScreen();
+              return const SplashScreen();
             }
-            return const HomeScreen();
+            return const SplashScreen();
           }),
     );
   }

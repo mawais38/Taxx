@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../widgets/custom_paint.dart';
+import '../home/home_screen.dart';
 import 'bloc/login_bloc.dart';
 
 class LoginForm extends StatefulWidget {
@@ -136,9 +137,13 @@ class _LoginFormState extends State<LoginForm> {
                             color: const Color(0xff0e47a1),
                             borderRadius: BorderRadius.circular(35),
                           ),
-                          child: const FloatingActionButton.extended(
+                          child:  FloatingActionButton.extended(
                               backgroundColor: Color(0xff0e47a1),
-                              onPressed: null,
+                           onPressed: (){
+                                        Navigator.push(
+                                         context,
+                                              MaterialPageRoute(builder: (context) => const HomeScreen()),
+                                                           );},
                               label: Text("LOGIN")),
                         ),
                         const SizedBox(
