@@ -482,9 +482,16 @@ class Specialist extends StatelessWidget {
         // This next line does the trick.
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          SizedBox(
+          Container(
             width: 150,
             height: 150,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              border: Border.all(
+                color: Colors.grey,
+                width: 3,
+              )
+            ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
@@ -493,9 +500,52 @@ class Specialist extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          Container(
             width: 150,
             height: 150,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 3,
+                )
+            ),
+            child: Column(
+              children: [
+                Image.asset("assets/part-2.png"),
+                Text("7CF - Tyre Foam", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                Text("Rs 19200", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
+          ),
+          Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 3,
+                )
+            ),
+            child: Column(
+              children: [
+                Image.asset("assets/part-3.png"),
+                Text("7CF - Tyre Wax", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                Text("Rs 8500", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
+          ),
+          Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 3,
+                )
+            ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
@@ -504,31 +554,16 @@ class Specialist extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          Container(
             width: 150,
             height: 150,
-            child: Column(
-              children: [
-                Image.asset("assets/engine-block.jpg"),
-                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
-                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
-              ],
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 3,
+                )
             ),
-          ),
-          SizedBox(
-            width: 150,
-            height: 150,
-            child: Column(
-              children: [
-                Image.asset("assets/engine-block.jpg"),
-                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
-                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
-              ],
-            ),
-          ),
-          SizedBox(
-            width: 150,
-            height: 150,
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
