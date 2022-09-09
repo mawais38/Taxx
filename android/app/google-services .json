@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58567138263",
+    "project_id": "taxx-c1734",
+    "storage_bucket": "taxx-c1734.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58567138263:android:a28cf2fa07ff578ea60992",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58567138263-0qdt040ova7p3dieomftu6svu09je5l5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8sLZ2MwyAEk4lyNkjLAsyR-AMuopbcVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58567138263-0qdt040ova7p3dieomftu6svu09je5l5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,5 @@
-import 'package:Taxx/screens/signup/signup_form.dart';
 import 'package:Taxx/screens/splash/splash_screen.dart';
+import 'package:firebase_core_dart/firebase_core_dart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'app_router.dart';
@@ -7,10 +7,16 @@ import 'blocs/authentication/authentication_bloc.dart';
 import 'blocs/simple_bloc_observer.dart';
 import 'data/repositories/authentication_repository.dart';
 import 'data/services.dart';
-import 'screens/login/login_screen.dart';
 import 'themes/default_theme.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyA8sLZ2MwyAEk4lyNkjLAsyR-AMuopbcVE",
+          appId: "1:58567138263:android:a28cf2fa07ff578ea60992",
+          messagingSenderId: "58567138263",
+          projectId: "taxx-c1734"));
   AppRouter.setupRoutes();
 
   // BlocObserver won't work unless all of the init code is inside runZoned's body
