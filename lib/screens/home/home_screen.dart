@@ -369,7 +369,7 @@ class HomeScreen extends StatelessWidget {
                         Container(
                           height: 75,
                           width: 75,
-                          child: Icon(Icons.car_crash_rounded,size: 45,color:Color(0xff1E1953) ,),
+                          child: const Icon(Icons.car_crash_rounded,size: 45,color:Color(0xff1E1953) ,),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(55),
@@ -406,7 +406,7 @@ class HomeScreen extends StatelessWidget {
                         Container(
                           height: 75,
                           width: 75,
-                          child: Icon(Icons.car_rental,size: 45,color:Color(0xff1E1953) ,),
+                          child: const Icon(Icons.car_rental,size: 45,color: Color(0xff1E1953) ,),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(55),
@@ -421,7 +421,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const Padding(
-                          padding: const EdgeInsets.only(top: 5),
+                          padding:  EdgeInsets.only(top: 5),
                           child: Text(
                             "Carpet \nClean",
                             style: TextStyle(
@@ -443,7 +443,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "Specialist",
+                    "Parts",
                     style: TextStyle(
                         color: Color(0xff0e47a1),
                         fontWeight: FontWeight.w900,
@@ -454,14 +454,14 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(
                         color: Color(0xff0e47a1),
                         fontWeight: FontWeight.w600,
-                        fontSize: 20),
+                        fontSize: 16),
                   ),
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top:15),
-              child: const Specialist(),
+            const Padding(
+              padding: EdgeInsets.only(top:15,bottom: 20),
+              child: Specialist(),
             ),
           ],
         ),
@@ -476,7 +476,7 @@ class Specialist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 180,
       width: double.infinity,
       child: ListView(
         // This next line does the trick.
@@ -484,94 +484,98 @@ class Specialist extends StatelessWidget {
         children: <Widget>[
           Container(
             width: 150,
-            height: 150,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(
-                color: Colors.grey,
-                width: 3,
-              )
+                color: Color(0xfff0e6ff).withOpacity(0.5),
+                borderRadius: BorderRadius.circular(10),
+                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
-                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
-                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                ),
+                const Text("Rs 12800", style:  TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),
           ),
+          SizedBox(width: 7,),
           Container(
             width: 150,
-            height: 150,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  color: Colors.grey,
-                  width: 3,
-                )
-            ),
-            child: Column(
-              children: [
-                Image.asset("assets/part-2.png"),
-                Text("7CF - Tyre Foam", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
-                Text("Rs 19200", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
-              ],
-            ),
-          ),
-          Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  color: Colors.grey,
-                  width: 3,
-                )
-            ),
-            child: Column(
-              children: [
-                Image.asset("assets/part-3.png"),
-                Text("7CF - Tyre Wax", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
-                Text("Rs 8500", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
-              ],
-            ),
-          ),
-          Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  color: Colors.grey,
-                  width: 3,
-                )
+                color: Color(0xfff0e6ff).withOpacity(0.5),
+                borderRadius: BorderRadius.circular(10),
+                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
-                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
-                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                ),
+                const Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),
           ),
+          SizedBox(width: 7,),
           Container(
             width: 150,
-            height: 150,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  color: Colors.grey,
-                  width: 3,
-                )
+                color: Color(0xfff0e6ff).withOpacity(0.5),
+                borderRadius: BorderRadius.circular(10),
+                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
             ),
             child: Column(
               children: [
                 Image.asset("assets/engine-block.jpg"),
-                Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
-                Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                ),
+                const Text("Rs 12800", style:  TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
               ],
             ),
           ),
+          SizedBox(width: 7,),
+          Container(
+            width: 150,
+            decoration: BoxDecoration(
+              color: Color(0xfff0e6ff).withOpacity(0.5),
+              borderRadius: BorderRadius.circular(10),
+              border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
+            ),
+            child: Column(
+              children: [
+                Image.asset("assets/engine-block.jpg"),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                ),                const Text("Rs 12800", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
+          ),
+          SizedBox(width: 7,),
+          Container(
+            width: 150,
+            decoration: BoxDecoration(
+                color: Color(0xfff0e6ff).withOpacity(0.5),
+                borderRadius: BorderRadius.circular(10),
+                border:Border.all(width: 1,color: Color(0xff0e47a1).withOpacity(0.3))
+            ),
+            child: Column(
+              children: [
+                Image.asset("assets/engine-block.jpg"),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text("7CF - All in One", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),),
+                ),                const Text("Rs 12800", style:  TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xff0e47a1)),)
+              ],
+            ),
+          ),
+
         ],
       ),
     );
