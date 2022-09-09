@@ -1,27 +1,22 @@
-import 'package:Taxx/screens/splash/splash_screen.dart';
-import 'package:firebase_core_dart/firebase_core_dart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'app_router.dart';
 import 'blocs/authentication/authentication_bloc.dart';
 import 'blocs/simple_bloc_observer.dart';
+import 'components/loading_indicator.dart';
 import 'data/repositories/authentication_repository.dart';
 import 'data/services.dart';
+import 'screens/home/home_screen.dart';
+import 'screens/login/login_screen.dart';
+import 'screens/splash/splash_screen.dart';
 import 'themes/default_theme.dart';
 
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-      options: const FirebaseOptions(
-          apiKey: "AIzaSyA8sLZ2MwyAEk4lyNkjLAsyR-AMuopbcVE",
-          appId: "1:58567138263:android:a28cf2fa07ff578ea60992",
-          messagingSenderId: "58567138263",
-          projectId: "taxx-c1734"));
+void main() {
   AppRouter.setupRoutes();
 
   // BlocObserver won't work unless all of the init code is inside runZoned's body
   BlocOverrides.runZoned(
-    () async {
+        () async {
       WidgetsFlutterBinding.ensureInitialized();
       initServices();
       final authenticationBloc = AuthenticationBloc(
@@ -51,17 +46,17 @@ class TaxxApp extends StatelessWidget {
       theme: defaultTheme,
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
           builder: (context, state) {
-        if (state is AuthenticationSuccess) {
-          return SplashScreen();
-        }
-        if (state is AuthenticationFailure) {
-          return SplashScreen();
-        }
-        if (state is AuthenticationInProgress) {
-          return SplashScreen();
-        }
-        return SplashScreen();
-      }),
+            if (state is AuthenticationSuccess) {
+              return const HomeScreen();
+            }
+            if (state is AuthenticationFailure) {
+              return LoginScreen();
+            }
+            if (state is AuthenticationInProgress) {
+              return const LoadingIndicator();
+            }
+            return const SplashScreen();
+          }),
     );
   }
 }
