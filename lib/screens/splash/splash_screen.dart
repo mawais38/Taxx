@@ -99,20 +99,20 @@ class _SplashScreenState extends State<SplashScreen> {
               ]),
             ),
           ),
-          Positioned(
-            bottom:710,
-            right: 450,
-            child: CustomPaint(
-              painter:  DrawCircle(color: Color(0XFFF7E3FE),value1: 20,value2: 8,value3: 140),
-            ),
-          ),
-          Positioned(
-            top: 650,
-            right: 415,
-            child: CustomPaint(
-              painter: DrawCircle(color: Color(0xfff7e3fe),value1: 20,value2: 8,value3: 80),
-            ),
-          ),
+          // Positioned(
+          //   bottom:710,
+          //   right: 450,
+          //   child: CustomPaint(
+          //     painter:  DrawCircle(color: Color(0XFFF7E3FE),value1: 20,value2: 8,value3: 140),
+          //   ),
+          // ),
+          // Positioned(
+          //   top: 650,
+          //   right: 415,
+          //   child: CustomPaint(
+          //     painter: DrawCircle(color: Color(0xfff7e3fe),value1: 20,value2: 8,value3: 80),
+          //   ),
+          // ),
         ],
       ),
     );
